@@ -18,8 +18,12 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         configureMap()
-        configureLocationManager()
+        
        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        configureLocationManager()
     }
     
     func configureMap() {
@@ -33,11 +37,11 @@ class MapViewController: UIViewController {
     
     func configureLocationManager() {
         locationManager = CLLocationManager()
-        
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         locationManager?.startUpdatingLocation()
+        locationManager?.allowDeferredLocationUpdates(untilTraveled: 50.0, timeout: 300)
     }
     
     func centerMap(newLocation: CLLocation) {
