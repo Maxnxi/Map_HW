@@ -16,10 +16,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureMap()
-        
-       
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,7 +25,7 @@ class MapViewController: UIViewController {
     
     func configureMap() {
         let coordinate = CLLocationCoordinate2D(latitude: 59.939095, longitude: 30.315868)
-        let camera = GMSCameraPosition.camera(withTarget: coordinate, zoom: 10)
+        let camera = GMSCameraPosition.camera(withTarget: coordinate, zoom: 14)
         mapView.camera = camera
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
@@ -41,25 +38,22 @@ class MapViewController: UIViewController {
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         locationManager?.startUpdatingLocation()
-        locationManager?.allowDeferredLocationUpdates(untilTraveled: 50.0, timeout: 300)
+        locationManager?.distanceFilter = 50
     }
     
     func centerMap(newLocation: CLLocation) {
         let myLocation = newLocation
-        let camera = GMSCameraPosition.camera(withLatitude: myLocation.coordinate.latitude, longitude: myLocation.coordinate.longitude, zoom: 14.0)
+        let camera = GMSCameraPosition.camera(withLatitude: myLocation.coordinate.latitude, longitude: myLocation.coordinate.longitude, zoom: 17.0)
         mapView.camera = camera
-        //mapView.animate(to: )
     }
     
     func addMarker(newLocation: CLLocation) {
         let coordinate2d = newLocation.coordinate
-        
         let marker = GMSMarker(position: coordinate2d)
-        marker.icon = UIImage(systemName: "drop.fill")
+        let imageOfMarker = UIImage(systemName: "drop.fill")
+        marker.icon = imageOfMarker
         marker.map = mapView
-         
     }
-
 
     @IBAction func centerButtonWasPressed(_ sender: Any) {
         guard let location = locationManager?.location else {
