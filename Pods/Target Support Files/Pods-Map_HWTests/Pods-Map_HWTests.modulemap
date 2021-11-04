@@ -1,6 +1,0 @@
-framework module Pods_Map_HWTests {
-  umbrella header "Pods-Map_HWTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
