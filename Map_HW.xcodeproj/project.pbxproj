@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		057DB1D127316EFD003C9066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1D027316EFD003C9066 /* AppDelegate.swift */; };
 		057DB1D327316EFD003C9066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1D227316EFD003C9066 /* SceneDelegate.swift */; };
-		057DB1D527316EFD003C9066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1D427316EFD003C9066 /* ViewController.swift */; };
+		057DB1D527316EFD003C9066 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1D427316EFD003C9066 /* MapViewController.swift */; };
 		057DB1D827316EFD003C9066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057DB1D627316EFD003C9066 /* Main.storyboard */; };
 		057DB1DA27316F00003C9066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057DB1D927316F00003C9066 /* Assets.xcassets */; };
 		057DB1DD27316F00003C9066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057DB1DB27316F00003C9066 /* LaunchScreen.storyboard */; };
 		057DB1E827316F01003C9066 /* Map_HWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1E727316F01003C9066 /* Map_HWTests.swift */; };
 		057DB1F227316F01003C9066 /* Map_HWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1F127316F01003C9066 /* Map_HWUITests.swift */; };
 		057DB1F427316F01003C9066 /* Map_HWUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1F327316F01003C9066 /* Map_HWUITestsLaunchTests.swift */; };
+		057DB20127318BBA003C9066 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057DB20027318BBA003C9066 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		057DB1CD27316EFD003C9066 /* Map_HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Map_HW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057DB1D027316EFD003C9066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		057DB1D227316EFD003C9066 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		057DB1D427316EFD003C9066 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		057DB1D427316EFD003C9066 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		057DB1D727316EFD003C9066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		057DB1D927316F00003C9066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		057DB1DC27316F00003C9066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		057DB1ED27316F01003C9066 /* Map_HWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Map_HWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		057DB1F127316F01003C9066 /* Map_HWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_HWUITests.swift; sourceTree = "<group>"; };
 		057DB1F327316F01003C9066 /* Map_HWUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_HWUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		057DB20027318BBA003C9066 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057DB20127318BBA003C9066 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,8 @@
 				057DB1E627316F01003C9066 /* Map_HWTests */,
 				057DB1F027316F01003C9066 /* Map_HWUITests */,
 				057DB1CE27316EFD003C9066 /* Products */,
+				F13E3317E3D8A315B9CAB95B /* Pods */,
+				274BAB464123C36506909CA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,7 +106,7 @@
 			children = (
 				057DB1D027316EFD003C9066 /* AppDelegate.swift */,
 				057DB1D227316EFD003C9066 /* SceneDelegate.swift */,
-				057DB1D427316EFD003C9066 /* ViewController.swift */,
+				057DB1D427316EFD003C9066 /* MapViewController.swift */,
 				057DB1D627316EFD003C9066 /* Main.storyboard */,
 				057DB1D927316F00003C9066 /* Assets.xcassets */,
 				057DB1DB27316F00003C9066 /* LaunchScreen.storyboard */,
@@ -125,6 +130,21 @@
 				057DB1F327316F01003C9066 /* Map_HWUITestsLaunchTests.swift */,
 			);
 			path = Map_HWUITests;
+			sourceTree = "<group>";
+		};
+		274BAB464123C36506909CA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				057DB20027318BBA003C9066 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F13E3317E3D8A315B9CAB95B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				057DB1D527316EFD003C9066 /* ViewController.swift in Sources */,
+				057DB1D527316EFD003C9066 /* MapViewController.swift in Sources */,
 				057DB1D127316EFD003C9066 /* AppDelegate.swift in Sources */,
 				057DB1D327316EFD003C9066 /* SceneDelegate.swift in Sources */,
 			);
@@ -442,6 +462,8 @@
 				DEVELOPMENT_TEAM = W8PA5V3MFD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Map_HW/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "need to check your location";
+				INFOPLIST_KEY_NSLocationUsageDescription = "need to check your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -456,7 +478,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,6 +492,8 @@
 				DEVELOPMENT_TEAM = W8PA5V3MFD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Map_HW/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "need to check your location";
+				INFOPLIST_KEY_NSLocationUsageDescription = "need to check your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -484,7 +508,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
