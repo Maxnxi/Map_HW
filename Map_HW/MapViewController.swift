@@ -23,7 +23,7 @@ class MapViewController: UIViewController {
     //RealmServices
     private let realmServices = RealmServices()
     //Locatingservices
-    private let locatingServices = LocatingServices()
+    //private let locatingServices = LocatingServices()
     
     @IBOutlet weak var startTrackView: UIView!
     @IBOutlet weak var startTrackButton: UIButton!
@@ -98,9 +98,16 @@ class MapViewController: UIViewController {
     
     func saveLastRouteToRealm() {
         guard let routepath = routePath else { return }
-        
         let routeRealm = routeModelFactory.constructRouteRealm(route: routepath)
         realmServices.saveRoute(route: routeRealm)
+    }
+    
+    func showLastRouteOnMap() {
+        guard let routeRealm = realmServices.loadRoute() else { return }
+        let routeGMS = routeModelFactory.constructRouteToGMSMutablePath(route: routeRealm)
+        route?.path = routeGMS
+        route?.map = mapView
+
     }
     
     func showAlertView(completion: @escaping(_ result: Bool ) -> ()) {
@@ -150,10 +157,8 @@ class MapViewController: UIViewController {
         // save last track
         self.saveLastRouteToRealm()
     }
-    
-    func showLastRouteOnMap() {
-        
-    }
+
+   
     
     @IBAction func stopTrackButtonWasPressed(_ sender: Any) {
         print("stop Track")
@@ -171,7 +176,7 @@ class MapViewController: UIViewController {
                     // stop
                     self.stopLocating()
                     self.saveLastRouteToRealm()
-                    
+                    self.showLastRouteOnMap()
                 case false:
                     print("false")
                     
@@ -179,7 +184,7 @@ class MapViewController: UIViewController {
             }
         } else {
             // try to show
-            
+            self.showLastRouteOnMap()
         }
         
         
