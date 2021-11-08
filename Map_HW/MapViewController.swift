@@ -107,6 +107,8 @@ class MapViewController: UIViewController {
         let routeGMS = routeModelFactory.constructRouteToGMSMutablePath(route: routeRealm)
         route?.path = routeGMS
         route?.map = mapView
+        let camera = GMSCameraPosition.camera(withTarget: routeGMS.coordinate(at: 0), zoom: 12)
+        mapView.camera = camera
 
     }
     
