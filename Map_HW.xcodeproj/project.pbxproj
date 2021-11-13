@@ -7,14 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		057202FD273FAEC600DD2DFD /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057202FC273FAEC600DD2DFD /* BaseRouter.swift */; };
 		05720300273FB03E00DD2DFD /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057202FF273FB03E00DD2DFD /* StoryboardIdentifiable.swift */; };
 		05720302273FB36D00DD2DFD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05720301273FB36D00DD2DFD /* MainViewController.swift */; };
-		057202F1273E687E00DD2DFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057202F0273E687E00DD2DFD /* User.swift */; };
-		057202F6273E6D8000DD2DFD /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057202F5273E6D8000DD2DFD /* Auth.storyboard */; };
-		057202F8273E6DD000DD2DFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057202F7273E6DD000DD2DFD /* LoginViewController.swift */; };
-		057202FA273E6DE300DD2DFD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057202F9273E6DE300DD2DFD /* RegisterViewController.swift */; };
+		05720304273FB38000DD2DFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05720303273FB38000DD2DFD /* LoginViewController.swift */; };
 		057DB1D127316EFD003C9066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1D027316EFD003C9066 /* AppDelegate.swift */; };
 		057DB1D327316EFD003C9066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1D227316EFD003C9066 /* SceneDelegate.swift */; };
 		057DB1D527316EFD003C9066 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1D427316EFD003C9066 /* MapViewController.swift */; };
@@ -55,10 +51,7 @@
 		057202FC273FAEC600DD2DFD /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		057202FF273FB03E00DD2DFD /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		05720301273FB36D00DD2DFD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		057202F0273E687E00DD2DFD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		057202F5273E6D8000DD2DFD /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
-		057202F7273E6DD000DD2DFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		057202F9273E6DE300DD2DFD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		05720303273FB38000DD2DFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		057DB1CD27316EFD003C9066 /* Map_HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Map_HW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057DB1D027316EFD003C9066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		057DB1D227316EFD003C9066 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,13 +110,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-
 		057202FB273FAEAF00DD2DFD /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				057202FC273FAEC600DD2DFD /* BaseRouter.swift */,
 				057202FF273FB03E00DD2DFD /* StoryboardIdentifiable.swift */,
 				05720301273FB36D00DD2DFD /* MainViewController.swift */,
+				05720303273FB38000DD2DFD /* LoginViewController.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -133,37 +126,6 @@
 			children = (
 			);
 			path = Helper;
-		057202EF273E686C00DD2DFD /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		057202F2273E6CEA00DD2DFD /* Flow */ = {
-			isa = PBXGroup;
-			children = (
-				057202F3273E6CF600DD2DFD /* Auth */,
-				057202F4273E6D0000DD2DFD /* Main */,
-			);
-			path = Flow;
-			sourceTree = "<group>";
-		};
-		057202F3273E6CF600DD2DFD /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				057202F5273E6D8000DD2DFD /* Auth.storyboard */,
-				057202F7273E6DD000DD2DFD /* LoginViewController.swift */,
-				057202F9273E6DE300DD2DFD /* RegisterViewController.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		057202F4273E6D0000DD2DFD /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		057DB1C427316EFC003C9066 = {
@@ -191,11 +153,8 @@
 		057DB1CF27316EFD003C9066 /* Map_HW */ = {
 			isa = PBXGroup;
 			children = (
-
 				057202FE273FB02C00DD2DFD /* Helper */,
 				057202FB273FAEAF00DD2DFD /* Router */,
-				057202F2273E6CEA00DD2DFD /* Flow */,
-				057202EF273E686C00DD2DFD /* Entity */,
 				057DB1D027316EFD003C9066 /* AppDelegate.swift */,
 				057DB1D227316EFD003C9066 /* SceneDelegate.swift */,
 				057DB1D427316EFD003C9066 /* MapViewController.swift */,
@@ -238,7 +197,6 @@
 		05AB8E922739343300933AB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				057202F0273E687E00DD2DFD /* User.swift */,
 				05AB8E932739344900933AB1 /* RouteRealmObject.swift */,
 				05AB8E9727398DD000933AB1 /* RouteModelFactory.swift */,
 			);
@@ -380,7 +338,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				057202F6273E6D8000DD2DFD /* Auth.storyboard in Resources */,
 				057DB1DD27316F00003C9066 /* LaunchScreen.storyboard in Resources */,
 				057DB1DA27316F00003C9066 /* Assets.xcassets in Resources */,
 				057DB1D827316EFD003C9066 /* Main.storyboard in Resources */,
@@ -545,13 +502,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				057202F8273E6DD000DD2DFD /* LoginViewController.swift in Sources */,
 				05AB8E9627394ADC00933AB1 /* LocatingServices.swift in Sources */,
 				057DB1D527316EFD003C9066 /* MapViewController.swift in Sources */,
 				057DB1D127316EFD003C9066 /* AppDelegate.swift in Sources */,
-				057202FA273E6DE300DD2DFD /* RegisterViewController.swift in Sources */,
 				057DB1D327316EFD003C9066 /* SceneDelegate.swift in Sources */,
-				057202F1273E687E00DD2DFD /* User.swift in Sources */,
 				05AB8E942739344900933AB1 /* RouteRealmObject.swift in Sources */,
 				05720300273FB03E00DD2DFD /* StoryboardIdentifiable.swift in Sources */,
 				05AB8E91273930D800933AB1 /* RealmServices.swift in Sources */,
