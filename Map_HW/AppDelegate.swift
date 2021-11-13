@@ -18,6 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey("AIzaSyCpIEBdgr4f3Ne_OrRgp2C2mQS3Vr8iAsM")
         
+        let controller: UIViewController
+        if UserDefaults.standard.bool(forKey: "isLogin") {
+        controller = UIStoryboard(name: "Main", bundle: nil) .instantiateViewController(MainViewController.self)
+        } else {
+        controller = UIStoryboard(name: "Auth", bundle: nil)
+        .instantiateViewController(LoginViewController.self) window = UIWindow()
+        window?.rootViewController = UINavigationController(rootViewController: controller)
+        window?.makeKeyAndVisible()
         
         return true
     }

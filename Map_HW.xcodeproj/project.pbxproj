@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		057202FD273FAEC600DD2DFD /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057202FC273FAEC600DD2DFD /* BaseRouter.swift */; };
+		05720300273FB03E00DD2DFD /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057202FF273FB03E00DD2DFD /* StoryboardIdentifiable.swift */; };
+		05720302273FB36D00DD2DFD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05720301273FB36D00DD2DFD /* MainViewController.swift */; };
+		05720304273FB38000DD2DFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05720303273FB38000DD2DFD /* LoginViewController.swift */; };
 		057DB1D127316EFD003C9066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1D027316EFD003C9066 /* AppDelegate.swift */; };
 		057DB1D327316EFD003C9066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1D227316EFD003C9066 /* SceneDelegate.swift */; };
 		057DB1D527316EFD003C9066 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1D427316EFD003C9066 /* MapViewController.swift */; };
@@ -44,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		057202FC273FAEC600DD2DFD /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		057202FF273FB03E00DD2DFD /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		05720301273FB36D00DD2DFD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		05720303273FB38000DD2DFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		057DB1CD27316EFD003C9066 /* Map_HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Map_HW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057DB1D027316EFD003C9066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		057DB1D227316EFD003C9066 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +110,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		057202FB273FAEAF00DD2DFD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				057202FC273FAEC600DD2DFD /* BaseRouter.swift */,
+				057202FF273FB03E00DD2DFD /* StoryboardIdentifiable.swift */,
+				05720301273FB36D00DD2DFD /* MainViewController.swift */,
+				05720303273FB38000DD2DFD /* LoginViewController.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		057202FE273FB02C00DD2DFD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		057DB1C427316EFC003C9066 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +153,8 @@
 		057DB1CF27316EFD003C9066 /* Map_HW */ = {
 			isa = PBXGroup;
 			children = (
+				057202FE273FB02C00DD2DFD /* Helper */,
+				057202FB273FAEAF00DD2DFD /* Router */,
 				057DB1D027316EFD003C9066 /* AppDelegate.swift */,
 				057DB1D227316EFD003C9066 /* SceneDelegate.swift */,
 				057DB1D427316EFD003C9066 /* MapViewController.swift */,
@@ -479,8 +507,12 @@
 				057DB1D127316EFD003C9066 /* AppDelegate.swift in Sources */,
 				057DB1D327316EFD003C9066 /* SceneDelegate.swift in Sources */,
 				05AB8E942739344900933AB1 /* RouteRealmObject.swift in Sources */,
+				05720300273FB03E00DD2DFD /* StoryboardIdentifiable.swift in Sources */,
 				05AB8E91273930D800933AB1 /* RealmServices.swift in Sources */,
 				05AB8E9827398DD000933AB1 /* RouteModelFactory.swift in Sources */,
+				057202FD273FAEC600DD2DFD /* BaseRouter.swift in Sources */,
+				05720302273FB36D00DD2DFD /* MainViewController.swift in Sources */,
+				05720304273FB38000DD2DFD /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
