@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,41 +20,118 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQG-Dm-UDH">
-                                <rect key="frame" x="319" y="414" width="75" height="68"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="pVd-Bl-7hS">
+                                <rect key="frame" x="25" y="777" width="364" height="45"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKG-gq-xYT">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="68"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQG-Dm-UDH">
+                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKG-gq-xYT">
+                                                <rect key="frame" x="0.0" y="0.0" width="165.5" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="SiO-R4-D4s"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Начать новый трек" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="0.70052332456420063" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="startTrackButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SvR-0A-2Kk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="UKG-gq-xYT" secondAttribute="trailing" id="E1D-ED-zMm"/>
+                                            <constraint firstItem="UKG-gq-xYT" firstAttribute="top" secondItem="mQG-Dm-UDH" secondAttribute="top" id="EMf-s9-E6l"/>
+                                            <constraint firstItem="UKG-gq-xYT" firstAttribute="leading" secondItem="mQG-Dm-UDH" secondAttribute="leading" id="Fpa-TV-Mhn"/>
+                                            <constraint firstAttribute="bottom" secondItem="UKG-gq-xYT" secondAttribute="bottom" id="I7p-2r-pXK"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMU-If-N74">
+                                        <rect key="frame" x="198.5" y="0.0" width="165.5" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ci-ZY-6b3">
+                                                <rect key="frame" x="0.0" y="0.0" width="165.5" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="9St-I8-Fyi"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Закончить трек" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="0.69989439257148167" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="stopTrackButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0le-ct-5d6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="7ci-ZY-6b3" secondAttribute="trailing" id="4PD-gV-Lg4"/>
+                                            <constraint firstItem="7ci-ZY-6b3" firstAttribute="leading" secondItem="hMU-If-N74" secondAttribute="leading" id="6PG-K1-kfP"/>
+                                            <constraint firstItem="7ci-ZY-6b3" firstAttribute="top" secondItem="hMU-If-N74" secondAttribute="top" id="IDI-AA-T5X"/>
+                                            <constraint firstAttribute="bottom" secondItem="7ci-ZY-6b3" secondAttribute="bottom" id="PW6-LE-zgA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="kAs-d8-L8c"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pi-7S-zAv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HF-s9-gV2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" image="location.circle.fill" catalog="system" imagePadding="0.0">
-                                            <color key="baseBackgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Показать предыдущий маршрут" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="centerButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jN0-Ux-tIQ"/>
+                                            <action selector="showLasttrackButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M5W-EV-YCg"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="PPy-1z-yLV"/>
-                                    <constraint firstAttribute="height" constant="68" id="eaf-lc-1xt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="9BR-2i-B8b"/>
+                                    <constraint firstAttribute="height" constant="30" id="B1p-Tq-UcQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="8HF-s9-gV2" secondAttribute="bottom" id="M7y-Zl-PLP"/>
+                                    <constraint firstItem="8HF-s9-gV2" firstAttribute="top" secondItem="2pi-7S-zAv" secondAttribute="top" id="c8c-h1-fOI"/>
+                                    <constraint firstItem="8HF-s9-gV2" firstAttribute="leading" secondItem="2pi-7S-zAv" secondAttribute="leading" id="fkM-g5-dvs"/>
+                                    <constraint firstAttribute="trailing" secondItem="8HF-s9-gV2" secondAttribute="trailing" id="j1e-Ek-GWy"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mQG-Dm-UDH" secondAttribute="trailing" constant="20" id="51f-oU-LwX"/>
+                            <constraint firstItem="2pi-7S-zAv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2dq-Jn-wSH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pVd-Bl-7hS" secondAttribute="trailing" constant="25" id="3Ls-z8-faL"/>
                             <constraint firstItem="rtY-cg-q9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6zE-E2-tSQ"/>
                             <constraint firstItem="rtY-cg-q9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ETt-ya-kNY"/>
+                            <constraint firstItem="2pi-7S-zAv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NFK-MU-LMC"/>
+                            <constraint firstItem="pVd-Bl-7hS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Zpl-6o-Aj5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pVd-Bl-7hS" secondAttribute="bottom" constant="40" id="a2E-Pz-W4Y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rtY-cg-q9E" secondAttribute="trailing" id="jla-W9-I1H"/>
-                            <constraint firstItem="mQG-Dm-UDH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="370" id="xVf-xy-7T1"/>
+                            <constraint firstItem="2pi-7S-zAv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rMc-7L-TKT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rtY-cg-q9E" secondAttribute="bottom" id="yXQ-F7-TRA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="rtY-cg-q9E" id="mV3-2i-vwq"/>
+                        <outlet property="showLastTrackButton" destination="8HF-s9-gV2" id="aqG-JE-f8o"/>
+                        <outlet property="showLastTrackView" destination="2pi-7S-zAv" id="mTd-N9-ljP"/>
+                        <outlet property="startTrackButton" destination="UKG-gq-xYT" id="U1b-xu-TC2"/>
+                        <outlet property="startTrackView" destination="mQG-Dm-UDH" id="jb8-6d-291"/>
+                        <outlet property="stopTrackButton" destination="7ci-ZY-6b3" id="f8H-fs-RCa"/>
+                        <outlet property="stopTrackView" destination="hMU-If-N74" id="iDS-ra-WhJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,10 +140,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
