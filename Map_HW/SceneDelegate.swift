@@ -6,17 +6,27 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var coordinator: ApplicationCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        GMSServices.provideAPIKey("AIzaSyAuW-cBcK81Fq22yEn92y_fdBeGL8n6qq0")
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: windowScene)
+        window?.makeKeyAndVisible()
+        window?.sizeToFit()
+        window?.clipsToBounds = true
+        
+        coordinator = ApplicationCoordinator()
+        coordinator?.start()
+        return
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

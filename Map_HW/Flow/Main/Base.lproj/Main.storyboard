@@ -45,12 +45,8 @@
                             <constraint firstItem="c3l-Cc-C1e" firstAttribute="centerX" secondItem="QLR-eo-hVO" secondAttribute="centerX" id="heA-S2-bVe"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="router" destination="Ygt-wf-xgv" id="vT4-yG-hko"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sT0-P7-cLy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="Ygt-wf-xgv" customClass="MainRouter" customModule="Map_HW" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-828" y="84"/>
         </scene>
@@ -181,7 +177,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="pe2-78-90q" customClass="MainRouter" customModule="Map_HW" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>

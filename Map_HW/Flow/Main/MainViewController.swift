@@ -9,7 +9,10 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet var router: MainRouter!
+    static let reuseIdentifier = "MainViewController"
+    
+    var onMap: ((String) -> Void)?
+    var onLogout: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +21,12 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func showMap(_ sender: Any) {
-        router.toMap(usseles: "пример")
+        onMap?("пример")
     }
     
     @IBAction func logout(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "isLogin")
-        router.toLaunch()
+        onLogout?()
     }
     
     

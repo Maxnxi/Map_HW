@@ -9,9 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    //static let reuseIdentifier = "LoginViewController"
+    static let reuseIdentifier = "LoginViewController"
     
-    @IBOutlet var router: LoginRouter!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -20,7 +19,8 @@ class LoginViewController: UIViewController {
         static let password = "123456"
     }
     
-   
+    var onLogin: (() -> Void)?
+    var onRegister: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +40,11 @@ class LoginViewController: UIViewController {
 //              login == Constants.login && password == Constants.password else { return }
         print("Логин")
         UserDefaults.standard.set(true, forKey: "isLogin")
-        router.toMain()
-        print("To main")
+        onLogin?()
     }
     
     @IBAction func registerButtonWasPressed(_ sender: Any) {
+        onRegister?()
     }
     
 }

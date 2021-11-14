@@ -11,6 +11,8 @@ import CoreLocation
 
 class MapViewController: UIViewController {
 
+    static let reuseIdentifier = "MapViewController"
+    
     var usselesExampleVariable = ""
     
     var locationManager: CLLocationManager?

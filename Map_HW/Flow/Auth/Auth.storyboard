@@ -12,9 +12,9 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="RegisterViewController" id="Y6W-OH-hqX" customClass="RegisterViewController" customModule="Map_HW" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="jLe-g1-HIy">
                                 <rect key="frame" x="55" y="99" width="304" height="268"/>
@@ -219,11 +219,9 @@
                     <connections>
                         <outlet property="loginTextField" destination="UC0-SM-RwX" id="mAZ-0J-Onn"/>
                         <outlet property="passwordTextField" destination="cpw-MU-B6h" id="4n7-Gp-WIh"/>
-                        <outlet property="router" destination="fWF-Qp-YM5" id="hTp-MC-xgK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXf-vy-I6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="fWF-Qp-YM5" customClass="LoginRouter" customModule="Map_HW" customModuleProvider="target"/>
                 <exit id="yRV-Au-NFe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-846.37681159420299" y="83.705357142857139"/>

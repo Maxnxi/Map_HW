@@ -11,22 +11,18 @@ import GoogleMaps
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+//    var window: UIWindow?
+//    var coordinator: ApplicationCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        GMSServices.provideAPIKey("AIzaSyCpIEBdgr4f3Ne_OrRgp2C2mQS3Vr8iAsM")
-        
-        let controller: UIViewController
-        if UserDefaults.standard.bool(forKey: "isLogin") {
-            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(MainViewController.self)
-        } else {
-            controller = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(LoginViewController.self)
-        }
-            window = UIWindow()
-            window?.rootViewController = UINavigationController(rootViewController: controller)
-            window?.makeKeyAndVisible()
+//        GMSServices.provideAPIKey("AIzaSyCpIEBdgr4f3Ne_OrRgp2C2mQS3Vr8iAsM")
+//        
+//        window = UIWindow()
+//        window?.makeKeyAndVisible()
+//        coordinator = ApplicationCoordinator()
+//        coordinator?.start()
             
         return true
     }
