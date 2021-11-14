@@ -35,9 +35,9 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonWasPressed(_ sender: Any) {
-        guard let login = loginTextField.text,
-              let password = passwordTextField.text,
-              login == Constants.login && password == Constants.password else { return }
+//        guard let login = loginTextField.text,
+//              let password = passwordTextField.text,
+//              login == Constants.login && password == Constants.password else { return }
         print("Логин")
         UserDefaults.standard.set(true, forKey: "isLogin")
         router.toMain()

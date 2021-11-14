@@ -18,6 +18,8 @@ class RegisterViewController: UIViewController {
     }
     
 
+    @IBAction func registerButtonWasPressed(_ sender: Any) {
+    }
     
 
 }

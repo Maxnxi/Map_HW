@@ -12,7 +12,8 @@ final class MainRouter: BaseRouter {
     func toMap(usseles: String) {
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(MapViewController.self)
         //controller.usselesExampleVariable = usseles
-        show(controller)
+        //show(controller)
+        present(controller)
     }
     
     func toLaunch() {

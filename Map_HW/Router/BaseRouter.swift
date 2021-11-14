@@ -11,7 +11,7 @@ import UIKit
 class BaseRouter: NSObject {
     
     //var appDelegate: AppDelegate
-    @IBOutlet weak var controller: UIViewController!
+    @IBOutlet weak var controller = UIViewController()
     
 //    private init(appDelegate: AppDelegate, controller: UIViewController) {
 //        self.appDelegate = appDelegate
@@ -20,11 +20,11 @@ class BaseRouter: NSObject {
 //    }
     
     func show(_ controller: UIViewController) {
-        self.controller.show(controller, sender: nil)
+        self.controller?.show(controller, sender: nil)
     }
     
-    func present(_ controller: UIViewController) {
-        self.controller.present(controller, animated: true)
+    func present(_ cntroller: UIViewController) {
+        self.controller?.present(cntroller, animated: true)
     }
     
     func setAsRoot(_ controller: UIViewController) {

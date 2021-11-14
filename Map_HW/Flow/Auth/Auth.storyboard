@@ -83,7 +83,7 @@
                                                     </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="registerButtonWasPressed:" destination="yRV-Au-NFe" eventType="touchUpInside" id="zEc-hf-GwJ"/>
+                                                    <action selector="registerButtonWasPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hJB-Jg-0lp"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -179,7 +179,7 @@
                                                     </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="loginButtonWasPressed:" destination="yRV-Au-NFe" eventType="touchUpInside" id="FP5-wD-7kU"/>
+                                                    <action selector="loginButtonWasPressed:" destination="fZv-TW-T7E" eventType="touchUpInside" id="Al5-QM-XdV"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U50-Xu-LIy">
@@ -200,7 +200,7 @@
                                                     </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="registerButtonWasPressed:" destination="yRV-Au-NFe" eventType="touchUpInside" id="2K7-zZ-30d"/>
+                                                    <action selector="registerButtonWasPressed:" destination="fZv-TW-T7E" eventType="touchUpInside" id="piR-Zw-NpF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
