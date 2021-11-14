@@ -11,7 +11,7 @@
         <!--Register View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="registerViewController" id="Y6W-OH-hqX" customClass="RegisterViewController" customModule="Map_HW" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="Y6W-OH-hqX" customClass="RegisterViewController" customModule="Map_HW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
         <!--Login View Controller-->
         <scene sceneID="na4-gU-0Vv">
             <objects>
-                <viewController storyboardIdentifier="loginViewController" id="fZv-TW-T7E" customClass="LoginViewController" customModule="Map_HW" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="fZv-TW-T7E" customClass="LoginViewController" customModule="Map_HW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M96-f8-Rbs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,9 +219,11 @@
                     <connections>
                         <outlet property="loginTextField" destination="UC0-SM-RwX" id="mAZ-0J-Onn"/>
                         <outlet property="passwordTextField" destination="cpw-MU-B6h" id="4n7-Gp-WIh"/>
+                        <outlet property="router" destination="fWF-Qp-YM5" id="hTp-MC-xgK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXf-vy-I6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="fWF-Qp-YM5" customClass="LoginRouter" customModule="Map_HW" customModuleProvider="target"/>
                 <exit id="yRV-Au-NFe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-846.37681159420299" y="83.705357142857139"/>

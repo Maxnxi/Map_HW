@@ -9,7 +9,7 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    static let reuseIdentifier = "registerViewController"
+    //static let reuseIdentifier = "registerViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()

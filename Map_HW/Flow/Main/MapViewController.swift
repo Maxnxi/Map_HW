@@ -11,6 +11,8 @@ import CoreLocation
 
 class MapViewController: UIViewController {
 
+    var usselesExampleVariable = ""
+    
     var locationManager: CLLocationManager?
     var route: GMSPolyline?
     var routePath: GMSMutablePath?
