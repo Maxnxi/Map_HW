@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="jLe-g1-HIy">
-                                <rect key="frame" x="55" y="99" width="304" height="268"/>
+                                <rect key="frame" x="55" y="99" width="304" height="267.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="nNM-b3-7Sw">
-                                        <rect key="frame" x="0.0" y="0.0" width="304" height="163"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="162.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hqa-iq-bmR">
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="72"/>
@@ -42,7 +42,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hk9-Fr-9RW">
-                                                <rect key="frame" x="0.0" y="91" width="304" height="72"/>
+                                                <rect key="frame" x="0.0" y="91" width="304" height="71.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNO-LW-bmE">
                                                         <rect key="frame" x="0.0" y="0.0" width="304" height="27.5"/>
@@ -51,9 +51,9 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PFO-gB-7E6">
-                                                        <rect key="frame" x="0.0" y="37.5" width="304" height="34.5"/>
+                                                        <rect key="frame" x="0.0" y="37.5" width="304" height="34"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                         <connections>
                                                             <action selector="passwordTextField:" destination="yRV-Au-NFe" eventType="editingDidEnd" id="ahW-Te-TX1"/>
                                                         </connections>
@@ -63,7 +63,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6bE-Ik-u5U">
-                                        <rect key="frame" x="0.0" y="223" width="304" height="45"/>
+                                        <rect key="frame" x="0.0" y="222.5" width="304" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4l-4G-kH0">
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="45"/>
@@ -113,10 +113,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="LUW-Wd-eAc">
-                                <rect key="frame" x="55" y="99" width="304" height="379"/>
+                                <rect key="frame" x="55" y="99" width="304" height="378.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="HOh-Sj-1K8">
-                                        <rect key="frame" x="0.0" y="0.0" width="304" height="189"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="188.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1oY-mc-3Fd">
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="72"/>
@@ -127,7 +127,7 @@
                                                         <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UC0-SM-RwX">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="введите логин здесь ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UC0-SM-RwX">
                                                         <rect key="frame" x="0.0" y="37.5" width="304" height="34.5"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -138,7 +138,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fq8-BP-HEo">
-                                                <rect key="frame" x="0.0" y="117" width="304" height="72"/>
+                                                <rect key="frame" x="0.0" y="117" width="304" height="71.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MJ-ey-95l">
                                                         <rect key="frame" x="0.0" y="0.0" width="304" height="27.5"/>
@@ -146,10 +146,10 @@
                                                         <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpw-MU-B6h">
-                                                        <rect key="frame" x="0.0" y="37.5" width="304" height="34.5"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="введите пароль здесь ..." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpw-MU-B6h">
+                                                        <rect key="frame" x="0.0" y="37.5" width="304" height="34"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                         <connections>
                                                             <action selector="passwordTextField:" destination="yRV-Au-NFe" eventType="editingDidEnd" id="50V-qs-AO6"/>
                                                         </connections>
@@ -159,7 +159,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="cim-U9-dM2">
-                                        <rect key="frame" x="0.0" y="249" width="304" height="130"/>
+                                        <rect key="frame" x="0.0" y="248.5" width="304" height="130"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDq-Vi-TLR">
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="45"/>

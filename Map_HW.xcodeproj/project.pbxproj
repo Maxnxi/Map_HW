@@ -26,6 +26,8 @@
 		057DB1F227316F01003C9066 /* Map_HWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1F127316F01003C9066 /* Map_HWUITests.swift */; };
 		057DB1F427316F01003C9066 /* Map_HWUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057DB1F327316F01003C9066 /* Map_HWUITestsLaunchTests.swift */; };
 		057DB20127318BBA003C9066 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057DB20027318BBA003C9066 /* MapKit.framework */; };
+		057EDB7E2742621F00DA3E2F /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057EDB7D2742621F00DA3E2F /* NetworkLayer.swift */; };
+		057EDB8027426BDE00DA3E2F /* Apple.cer in Resources */ = {isa = PBXBuildFile; fileRef = 057EDB7F27426BDE00DA3E2F /* Apple.cer */; };
 		05AB8E91273930D800933AB1 /* RealmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB8E90273930D800933AB1 /* RealmServices.swift */; };
 		05AB8E942739344900933AB1 /* RouteRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB8E932739344900933AB1 /* RouteRealmObject.swift */; };
 		05AB8E9627394ADC00933AB1 /* LocatingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB8E9527394ADC00933AB1 /* LocatingServices.swift */; };
@@ -76,6 +78,8 @@
 		057DB1F127316F01003C9066 /* Map_HWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_HWUITests.swift; sourceTree = "<group>"; };
 		057DB1F327316F01003C9066 /* Map_HWUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_HWUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		057DB20027318BBA003C9066 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		057EDB7D2742621F00DA3E2F /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		057EDB7F27426BDE00DA3E2F /* Apple.cer */ = {isa = PBXFileReference; lastKnownFileType = text; path = Apple.cer; sourceTree = "<group>"; };
 		05AB8E90273930D800933AB1 /* RealmServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServices.swift; sourceTree = "<group>"; };
 		05AB8E932739344900933AB1 /* RouteRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRealmObject.swift; sourceTree = "<group>"; };
 		05AB8E9527394ADC00933AB1 /* LocatingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatingServices.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 		057DB1CF27316EFD003C9066 /* Map_HW */ = {
 			isa = PBXGroup;
 			children = (
+				057EDB7B274261C200DA3E2F /* SSLCertificates */,
 				057202F2273E6CEA00DD2DFD /* Flow */,
 				057202EF273E686C00DD2DFD /* Entity */,
 				057DB1D027316EFD003C9066 /* AppDelegate.swift */,
@@ -221,6 +226,15 @@
 				057DB1F327316F01003C9066 /* Map_HWUITestsLaunchTests.swift */,
 			);
 			path = Map_HWUITests;
+			sourceTree = "<group>";
+		};
+		057EDB7B274261C200DA3E2F /* SSLCertificates */ = {
+			isa = PBXGroup;
+			children = (
+				057EDB7D2742621F00DA3E2F /* NetworkLayer.swift */,
+				057EDB7F27426BDE00DA3E2F /* Apple.cer */,
+			);
+			path = SSLCertificates;
 			sourceTree = "<group>";
 		};
 		05AB8E8F273930C700933AB1 /* Services */ = {
@@ -377,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057EDB8027426BDE00DA3E2F /* Apple.cer in Resources */,
 				057202F6273E6D8000DD2DFD /* Auth.storyboard in Resources */,
 				057DB1DD27316F00003C9066 /* LaunchScreen.storyboard in Resources */,
 				057DB1DA27316F00003C9066 /* Assets.xcassets in Resources */,
@@ -546,6 +561,7 @@
 				0572030B273FB94D00DD2DFD /* MainViewController.swift in Sources */,
 				0540C4E72741337000AF1744 /* ApplicationCoordinator.swift in Sources */,
 				05AB8E9627394ADC00933AB1 /* LocatingServices.swift in Sources */,
+				057EDB7E2742621F00DA3E2F /* NetworkLayer.swift in Sources */,
 				0540C4E92741352700AF1744 /* AuthCoordinator.swift in Sources */,
 				057DB1D527316EFD003C9066 /* MapViewController.swift in Sources */,
 				057DB1D127316EFD003C9066 /* AppDelegate.swift in Sources */,
