@@ -11,16 +11,22 @@ import GoogleMaps
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+//    var window: UIWindow?
+//    var coordinator: ApplicationCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        GMSServices.provideAPIKey("AIzaSyCpIEBdgr4f3Ne_OrRgp2C2mQS3Vr8iAsM")
-        
-        
+//        GMSServices.provideAPIKey("AIzaSyCpIEBdgr4f3Ne_OrRgp2C2mQS3Vr8iAsM")
+//        
+//        window = UIWindow()
+//        window?.makeKeyAndVisible()
+//        coordinator = ApplicationCoordinator()
+//        coordinator?.start()
+            
         return true
     }
+    
 
     // MARK: UISceneSession Lifecycle
 
