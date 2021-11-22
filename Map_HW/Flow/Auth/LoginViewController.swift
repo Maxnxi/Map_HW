@@ -27,8 +27,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loginButton.isEnabled 
         
+        configureLoginBindings()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,9 +44,9 @@ class LoginViewController: UIViewController {
             .map { login, password in
                 return !(login ?? "").isEmpty && (password ?? "").count >= 6
             }
-            .bind { [weak loginButton] inputFilled in
-                loginButton?.isEnabled = inputFilled
-                
+            .bind { [weak self] inputFilled in
+                print("Set login button")
+                self?.loginButton?.isEnabled = inputFilled
             }
     }
     
