@@ -8,6 +8,7 @@ target 'Map_HW' do
   # Pods for Map_HW
 pod 'GoogleMaps'
 pod 'RealmSwift'
+pod 'Alamofire' 
 
   target 'Map_HWTests' do
     inherit! :search_paths
