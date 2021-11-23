@@ -50,7 +50,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        coverView = UIView(frame: rect)
 //        self.window?.addSubview(coverView!)
         guard let view = coverView else { return }
-        window?.willRemoveSubview(view)
+        self.window?.willRemoveSubview(view)
+        view.frame = CGRect(x: 0, y: 0, width: 10, height: 10)
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
@@ -82,7 +83,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let rect = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
         coverView = UIView(frame: rect)
         coverView?.backgroundColor = UIColor(displayP3Red: 1, green: 0.5, blue: 0.5, alpha: 1)
-        self.window?.addSubview(coverView!)
+        //self.window?.addSubview(coverView!)
         //coverView.backgroundColor.saturation(0.5)
     }
 

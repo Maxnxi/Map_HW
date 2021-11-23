@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LoginViewController: UIViewController {
 
@@ -13,6 +15,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     enum Constants {
         static let login = "admin"
@@ -24,6 +27,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureLoginBindings()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,6 +38,17 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func configureLoginBindings() {
+        Observable
+            .combineLatest(loginTextField.rx.text, passwordTextField.rx.text)
+            .map { login, password in
+                return !(login ?? "").isEmpty && (password ?? "").count >= 6
+            }
+            .bind { [weak self] inputFilled in
+                print("Set login button")
+                self?.loginButton?.isEnabled = inputFilled
+            }
+    }
     
     @IBAction func loginButtonWasPressed(_ sender: Any) {
 //        guard let login = loginTextField.text,

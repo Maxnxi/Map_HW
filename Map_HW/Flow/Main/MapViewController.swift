@@ -7,7 +7,7 @@
 
 import UIKit
 import GoogleMaps
-import CoreLocation
+//import CoreLocation
 
 class MapViewController: UIViewController {
 
@@ -15,7 +15,7 @@ class MapViewController: UIViewController {
     
     var usselesExampleVariable = ""
     
-    var locationManager: CLLocationManager?
+    var locationManager = LocationManager.shared //: CLLocationManager?
     var route: GMSPolyline?
     var routePath: GMSMutablePath?
     var isStartTrackState: Bool = false
@@ -63,18 +63,32 @@ class MapViewController: UIViewController {
         mapView.camera = camera
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
-        mapView.delegate = self
+        //mapView.delegate = self
     }
     
     func configureLocationManager() {
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.requestWhenInUseAuthorization()
-        locationManager?.allowsBackgroundLocationUpdates = true
-        locationManager?.startMonitoringSignificantLocationChanges()
-        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager?.startUpdatingLocation()
-        locationManager?.distanceFilter = 50
+        // version #2
+        locationManager
+            .location
+            .asObservable()
+            .bind { [weak self] location in
+                guard let location = location else { return }
+                self?.routePath?.add(location.coordinate)
+                self?.route?.path = self?.routePath
+                let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
+                self?.mapView.animate(to: position)
+            }
+    
+        
+        // version #1
+//        locationManager = CLLocationManager()
+//        locationManager?.delegate = self
+//        locationManager?.requestWhenInUseAuthorization()
+//        locationManager?.allowsBackgroundLocationUpdates = true
+//        locationManager?.startMonitoringSignificantLocationChanges()
+//        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+//        locationManager?.startUpdatingLocation()
+//        locationManager?.distanceFilter = 50
     }
     
     func centerMap(newLocation: CLLocation) {
@@ -142,7 +156,7 @@ class MapViewController: UIViewController {
         routePath = GMSMutablePath()
         route?.strokeWidth = 3
         route?.map = mapView
-        locationManager?.startUpdatingLocation()
+        locationManager.startUpdatingLocation()// startUpdatingLocation()
         isStartTrackState = true
         
 // version #1 for Homework #1
@@ -156,7 +170,7 @@ class MapViewController: UIViewController {
     func stopLocating() {
         route?.map = nil
         route?.map = mapView
-        locationManager?.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
         isStartTrackState = false
         // remove GMSMarker
         self.marker = nil
