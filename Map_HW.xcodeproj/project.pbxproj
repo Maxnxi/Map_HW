@@ -29,6 +29,14 @@
 		057EDB7E2742621F00DA3E2F /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057EDB7D2742621F00DA3E2F /* NetworkLayer.swift */; };
 		057EDB8027426BDE00DA3E2F /* Apple.cer in Resources */ = {isa = PBXBuildFile; fileRef = 057EDB7F27426BDE00DA3E2F /* Apple.cer */; };
 		05934C4A274B9EE700C93756 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05934C49274B9EE600C93756 /* LocationManager.swift */; };
+		05934C53274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.04.35 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 05934C4C274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.04.35 PM.png */; };
+		05934C54274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.05.34 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 05934C4D274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.05.34 PM.png */; };
+		05934C55274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.05.22 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 05934C4E274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.05.22 PM.png */; };
+		05934C56274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.09.17 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 05934C4F274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.09.17 PM.png */; };
+		05934C57274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.10.03 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 05934C50274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.10.03 PM.png */; };
+		05934C58274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.01.57 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 05934C51274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.01.57 PM.png */; };
+		05934C59274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.09.51 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 05934C52274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.09.51 PM.png */; };
+		05934C5B274BB24300C93756 /* Снимок экрана 2021-11-22 в 1.59.56 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 05934C5A274BB24300C93756 /* Снимок экрана 2021-11-22 в 1.59.56 PM.png */; };
 		05AB8E91273930D800933AB1 /* RealmServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB8E90273930D800933AB1 /* RealmServices.swift */; };
 		05AB8E942739344900933AB1 /* RouteRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB8E932739344900933AB1 /* RouteRealmObject.swift */; };
 		05AB8E9627394ADC00933AB1 /* LocatingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB8E9527394ADC00933AB1 /* LocatingServices.swift */; };
@@ -82,6 +90,14 @@
 		057EDB7D2742621F00DA3E2F /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		057EDB7F27426BDE00DA3E2F /* Apple.cer */ = {isa = PBXFileReference; lastKnownFileType = text; path = Apple.cer; sourceTree = "<group>"; };
 		05934C49274B9EE600C93756 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		05934C4C274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.04.35 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2021-11-22 в 2.04.35 PM.png"; sourceTree = "<group>"; };
+		05934C4D274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.05.34 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2021-11-22 в 2.05.34 PM.png"; sourceTree = "<group>"; };
+		05934C4E274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.05.22 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2021-11-22 в 2.05.22 PM.png"; sourceTree = "<group>"; };
+		05934C4F274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.09.17 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2021-11-22 в 2.09.17 PM.png"; sourceTree = "<group>"; };
+		05934C50274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.10.03 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2021-11-22 в 2.10.03 PM.png"; sourceTree = "<group>"; };
+		05934C51274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.01.57 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2021-11-22 в 2.01.57 PM.png"; sourceTree = "<group>"; };
+		05934C52274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.09.51 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2021-11-22 в 2.09.51 PM.png"; sourceTree = "<group>"; };
+		05934C5A274BB24300C93756 /* Снимок экрана 2021-11-22 в 1.59.56 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2021-11-22 в 1.59.56 PM.png"; sourceTree = "<group>"; };
 		05AB8E90273930D800933AB1 /* RealmServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServices.swift; sourceTree = "<group>"; };
 		05AB8E932739344900933AB1 /* RouteRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRealmObject.swift; sourceTree = "<group>"; };
 		05AB8E9527394ADC00933AB1 /* LocatingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatingServices.swift; sourceTree = "<group>"; };
@@ -199,6 +215,7 @@
 		057DB1CF27316EFD003C9066 /* Map_HW */ = {
 			isa = PBXGroup;
 			children = (
+				05934C4B274BB21B00C93756 /* HW6 */,
 				057EDB7B274261C200DA3E2F /* SSLCertificates */,
 				057202F2273E6CEA00DD2DFD /* Flow */,
 				057202EF273E686C00DD2DFD /* Entity */,
@@ -237,6 +254,21 @@
 				057EDB7F27426BDE00DA3E2F /* Apple.cer */,
 			);
 			path = SSLCertificates;
+			sourceTree = "<group>";
+		};
+		05934C4B274BB21B00C93756 /* HW6 */ = {
+			isa = PBXGroup;
+			children = (
+				05934C5A274BB24300C93756 /* Снимок экрана 2021-11-22 в 1.59.56 PM.png */,
+				05934C51274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.01.57 PM.png */,
+				05934C4C274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.04.35 PM.png */,
+				05934C4E274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.05.22 PM.png */,
+				05934C4D274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.05.34 PM.png */,
+				05934C4F274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.09.17 PM.png */,
+				05934C52274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.09.51 PM.png */,
+				05934C50274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.10.03 PM.png */,
+			);
+			path = HW6;
 			sourceTree = "<group>";
 		};
 		05AB8E8F273930C700933AB1 /* Services */ = {
@@ -396,8 +428,16 @@
 			files = (
 				057EDB8027426BDE00DA3E2F /* Apple.cer in Resources */,
 				057202F6273E6D8000DD2DFD /* Auth.storyboard in Resources */,
+				05934C54274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.05.34 PM.png in Resources */,
+				05934C5B274BB24300C93756 /* Снимок экрана 2021-11-22 в 1.59.56 PM.png in Resources */,
+				05934C58274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.01.57 PM.png in Resources */,
+				05934C56274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.09.17 PM.png in Resources */,
 				057DB1DD27316F00003C9066 /* LaunchScreen.storyboard in Resources */,
 				057DB1DA27316F00003C9066 /* Assets.xcassets in Resources */,
+				05934C59274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.09.51 PM.png in Resources */,
+				05934C57274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.10.03 PM.png in Resources */,
+				05934C55274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.05.22 PM.png in Resources */,
+				05934C53274BB23B00C93756 /* Снимок экрана 2021-11-22 в 2.04.35 PM.png in Resources */,
 				057DB1D827316EFD003C9066 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
