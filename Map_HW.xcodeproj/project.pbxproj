@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0517B21827510397002DC6A5 /* SaveNLoadToPhoneImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517B21727510397002DC6A5 /* SaveNLoadToPhoneImageService.swift */; };
+		0517B21B27510770002DC6A5 /* Extension_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0517B21A27510770002DC6A5 /* Extension_UIImage.swift */; };
 		0540C4E52741325200AF1744 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0540C4E42741325200AF1744 /* BaseCoordinator.swift */; };
 		0540C4E72741337000AF1744 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0540C4E62741337000AF1744 /* ApplicationCoordinator.swift */; };
 		0540C4E92741352700AF1744 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0540C4E82741352700AF1744 /* AuthCoordinator.swift */; };
@@ -64,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0517B21727510397002DC6A5 /* SaveNLoadToPhoneImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNLoadToPhoneImageService.swift; sourceTree = "<group>"; };
+		0517B21A27510770002DC6A5 /* Extension_UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension_UIImage.swift; sourceTree = "<group>"; };
 		0540C4E42741325200AF1744 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		0540C4E62741337000AF1744 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		0540C4E82741352700AF1744 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
@@ -142,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0517B21927510753002DC6A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0517B21A27510770002DC6A5 /* Extension_UIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0540C4E32741323600AF1744 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +235,7 @@
 				057DB1D227316EFD003C9066 /* SceneDelegate.swift */,
 				05AB8E922739343300933AB1 /* Model */,
 				05AB8E8F273930C700933AB1 /* Services */,
+				0517B21927510753002DC6A5 /* Extensions */,
 				057DB1D927316F00003C9066 /* Assets.xcassets */,
 				057DB1DB27316F00003C9066 /* LaunchScreen.storyboard */,
 				057DB1DE27316F00003C9066 /* Info.plist */,
@@ -274,6 +287,7 @@
 		05AB8E8F273930C700933AB1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0517B21727510397002DC6A5 /* SaveNLoadToPhoneImageService.swift */,
 				05AB8E90273930D800933AB1 /* RealmServices.swift */,
 				05AB8E9527394ADC00933AB1 /* LocatingServices.swift */,
 				05934C49274B9EE600C93756 /* LocationManager.swift */,
@@ -600,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0517B21B27510770002DC6A5 /* Extension_UIImage.swift in Sources */,
 				057202F8273E6DD000DD2DFD /* LoginViewController.swift in Sources */,
 				05934C4A274B9EE700C93756 /* LocationManager.swift in Sources */,
 				0572030B273FB94D00DD2DFD /* MainViewController.swift in Sources */,
@@ -611,6 +626,7 @@
 				057DB1D127316EFD003C9066 /* AppDelegate.swift in Sources */,
 				057202FA273E6DE300DD2DFD /* RegisterViewController.swift in Sources */,
 				057DB1D327316EFD003C9066 /* SceneDelegate.swift in Sources */,
+				0517B21827510397002DC6A5 /* SaveNLoadToPhoneImageService.swift in Sources */,
 				0540C4E52741325200AF1744 /* BaseCoordinator.swift in Sources */,
 				057202F1273E687E00DD2DFD /* User.swift in Sources */,
 				05AB8E942739344900933AB1 /* RouteRealmObject.swift in Sources */,

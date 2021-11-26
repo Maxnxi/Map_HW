@@ -39,6 +39,9 @@ final class LocationManager: NSObject {
         locationManager.startMonitoringSignificantLocationChanges()
         locationManager.requestAlwaysAuthorization()
     }
+    
+
+    
 }
 
 
@@ -46,7 +49,9 @@ extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations
                          locations: [CLLocation]) {
+        print("Set location")
         self.location = BehaviorRelay(value: locations.last)
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
