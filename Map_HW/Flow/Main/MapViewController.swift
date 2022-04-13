@@ -15,7 +15,7 @@ class MapViewController: UIViewController {
     
     var usselesExampleVariable = ""
     
-    var locationManager = LocationManager.shared //: CLLocationManager?
+    var locationManager /*= LocationManager.shared // */: CLLocationManager?
     var route: GMSPolyline?
     var routePath: GMSMutablePath?
     var isStartTrackState: Bool = false
@@ -37,10 +37,31 @@ class MapViewController: UIViewController {
     @IBOutlet weak var showLastTrackButton: UIButton!
     @IBOutlet weak var mapView: GMSMapView!
     
+    var avatarImage: UIImage?
+    var avatarPositionView: UIImageView?
+    var photoMarker: GMSMarker?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureMap()
         configureUI()
+        
+        avatarPositionView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        
+        let size = CGSize(width: 30, height: 30)
+        //avatarPositionView?.sizeThatFits(size)
+        var imagetToShow: UIImage
+        if let image = SaveNLoadToPhoneImageService.shared.loadImageFromDiskWith(fileName: avatarName) {
+            imagetToShow = image
+        } else {
+            imagetToShow = UIImage(systemName: "photo.circle")!
+        }
+        //guard let image = imagetToShow else { return }
+        avatarImage = UIImage().resizeImage(image: imagetToShow, targetSize: size)
+        avatarPositionView?.image = avatarImage
+        avatarPositionView?.layer.cornerRadius = 15
+        avatarPositionView?.layer.shadowColor = UIColor.black.cgColor
+        avatarPositionView?.layer.shadowOffset = CGSize(width: 5, height: 5)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,38 +84,65 @@ class MapViewController: UIViewController {
         mapView.camera = camera
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
-        //mapView.delegate = self
+        mapView.delegate = self
     }
     
     func configureLocationManager() {
         // version #2
-        locationManager
-            .location
-            .asObservable()
-            .bind { [weak self] location in
-                guard let location = location else { return }
-                self?.routePath?.add(location.coordinate)
-                self?.route?.path = self?.routePath
-                let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
-                self?.mapView.animate(to: position)
-            }
+//        locationManager
+//            .location
+//            .asObservable()
+//            .bind { [weak self] location in
+//                guard let location = location else { return }
+//                self?.routePath?.add(location.coordinate)
+//                self?.route?.path = self?.routePath
+//                let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
+//                self?.mapView.animate(to: position)
+//            }
     
         
         // version #1
-//        locationManager = CLLocationManager()
-//        locationManager?.delegate = self
-//        locationManager?.requestWhenInUseAuthorization()
-//        locationManager?.allowsBackgroundLocationUpdates = true
-//        locationManager?.startMonitoringSignificantLocationChanges()
-//        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-//        locationManager?.startUpdatingLocation()
-//        locationManager?.distanceFilter = 50
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.allowsBackgroundLocationUpdates = true
+        locationManager?.startMonitoringSignificantLocationChanges()
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.startUpdatingLocation()
+        locationManager?.distanceFilter = 50
     }
     
     func centerMap(newLocation: CLLocation) {
         let myLocation = newLocation
         let camera = GMSCameraPosition.camera(withLatitude: myLocation.coordinate.latitude, longitude: myLocation.coordinate.longitude, zoom: 17.0)
         mapView.camera = camera
+    }
+    
+    func addPhotoMarker(newLocation: CLLocation) {
+        let coordinate2d = newLocation.coordinate
+        let marker = GMSMarker(position: coordinate2d)
+        //let imageOfMarker = avatarImage
+        photoMarker = marker
+        photoMarker?.iconView = avatarPositionView
+        photoMarker?.iconView?.clipsToBounds = true
+        photoMarker?.iconView?.layer.cornerRadius = 15
+        photoMarker?.iconView?.layer.shadowColor = UIColor.darkGray.cgColor
+        photoMarker?.iconView?.layer.shadowRadius = 10
+        photoMarker?.iconView?.layer.shadowOffset = CGSize(width: 5, height: 5)
+        photoMarker?.iconView?.layer.borderColor = UIColor.white.cgColor
+        photoMarker?.iconView?.layer.borderWidth = 2
+        //marker.iconView?.layer.cornerRadius = (marker.iconView?.bounds.size.width ?? 30 )/2
+        photoMarker?.map = mapView
+    }
+    
+    func removePhotoMarker() {
+       
+        //let marker = GMSMarker()// position: coordinate2d)
+        //let imageOfMarker = avatarImage
+        //marker.iconView = nil
+        //marker.iconView?.layer.cornerRadius = (marker.iconView?.bounds.size.width ?? 30 )/2
+        photoMarker?.map = nil
+    
     }
     
     func addMarker(newLocation: CLLocation) {
@@ -156,7 +204,7 @@ class MapViewController: UIViewController {
         routePath = GMSMutablePath()
         route?.strokeWidth = 3
         route?.map = mapView
-        locationManager.startUpdatingLocation()// startUpdatingLocation()
+        locationManager?.startUpdatingLocation()// startUpdatingLocation()
         isStartTrackState = true
         
 // version #1 for Homework #1
@@ -170,7 +218,7 @@ class MapViewController: UIViewController {
     func stopLocating() {
         route?.map = nil
         route?.map = mapView
-        locationManager.stopUpdatingLocation()
+        locationManager?.stopUpdatingLocation()
         isStartTrackState = false
         // remove GMSMarker
         self.marker = nil
@@ -217,6 +265,7 @@ class MapViewController: UIViewController {
 extension MapViewController: CLLocationManagerDelegate, GMSMapViewDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        removePhotoMarker()
         guard let location = locations.last else { return }
 // version #2 for Homework #2
         routePath?.add(location.coordinate)
@@ -225,6 +274,7 @@ extension MapViewController: CLLocationManagerDelegate, GMSMapViewDelegate {
             addstartMarker()
         }
         let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
+        addPhotoMarker(newLocation: location)
         mapView.animate(to: position)
 // version #1 for Homework #1
 //        addMarker(newLocation: location)

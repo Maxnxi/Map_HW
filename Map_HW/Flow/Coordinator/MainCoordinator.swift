@@ -27,6 +27,7 @@ final class MainCoordinator: BaseCoordinator {
         controller.onLogout = { [weak self] in
             self?.onFinishFlow?()
         }
+        
         let rootController = UINavigationController(rootViewController: controller)
         setAsRoot(rootController)
         self.rootController = rootController

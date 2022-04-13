@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="c3l-Cc-C1e">
-                                <rect key="frame" x="143" y="403.5" width="128" height="89"/>
+                                <rect key="frame" x="99.5" y="367.5" width="215.5" height="161"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPN-B2-avY">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="31"/>
+                                        <rect key="frame" x="43.5" y="0.0" width="128" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Показать карту"/>
                                         <connections>
@@ -28,13 +28,34 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ri-XY-TiY">
-                                        <rect key="frame" x="30.5" y="58" width="67" height="31"/>
+                                        <rect key="frame" x="74" y="58" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Выйти"/>
                                         <connections>
                                             <action selector="logout:" destination="ynz-XK-5jp" eventType="touchUpInside" id="d6q-i8-Wem"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CZq-0f-DIJ">
+                                        <rect key="frame" x="0.0" y="116" width="215.5" height="45"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6y9-xB-8co">
+                                                <rect key="frame" x="0.0" y="0.5" width="45" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="5xZ-fD-Hze"/>
+                                                    <constraint firstAttribute="width" constant="45" id="D8M-xm-KqU"/>
+                                                    <constraint firstAttribute="width" secondItem="6y9-xB-8co" secondAttribute="height" multiplier="1:1" id="f3n-ed-ASE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SF-jH-QoV" userLabel="Сделать селфи">
+                                                <rect key="frame" x="55" y="7" width="160.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Настроить аватарку"/>
+                                                <connections>
+                                                    <action selector="makeSelfieButtonWasPressed:" destination="ynz-XK-5jp" eventType="touchUpInside" id="sLe-Cr-nQu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -45,10 +66,14 @@
                             <constraint firstItem="c3l-Cc-C1e" firstAttribute="centerX" secondItem="QLR-eo-hVO" secondAttribute="centerX" id="heA-S2-bVe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="avatarView" destination="6y9-xB-8co" id="NdU-RE-rTy"/>
+                        <outlet property="makePhotoBttn" destination="9SF-jH-QoV" id="p9g-Ih-wuZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sT0-P7-cLy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-828" y="84"/>
+            <point key="canvasLocation" x="-828.98550724637687" y="83.705357142857139"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -182,6 +207,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
